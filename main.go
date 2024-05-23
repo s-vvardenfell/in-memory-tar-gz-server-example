@@ -48,7 +48,7 @@ func manageFiles(w http.ResponseWriter, req *http.Request) {
 		return
 	}
 
-	fmt.Printf("4) incoming file size: %d\n", len(buf.Bytes()))
+	fmt.Printf("4) incoming file size: %d\n", buf.Len())
 
 	unGzArch, err := UnGzip(buf.Bytes())
 	if err != nil {
